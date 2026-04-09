@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+<listener>
+<listener class-name="com.orangehrm.listener_utilites.MyListner"/>
+</listener>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.orangehrm.automationtestcase.AddEmployeeTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
