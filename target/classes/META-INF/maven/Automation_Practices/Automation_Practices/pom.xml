@@ -9,11 +9,13 @@
 	<dependencies>
 		<!-- Source:
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<!-- Source:
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.41.0</version>
-			<scope>compile</scope>
+			<version>4.34.0</version>
+		
 		</dependency>
 
 		<!-- Source: https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->

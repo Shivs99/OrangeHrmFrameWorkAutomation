@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-
 public class DataBaseUtility {
 
 	Connection con;
@@ -48,7 +47,6 @@ public class DataBaseUtility {
 		}
 	}
 
-	
 	public void insertDataIntoTable() {
 		if (getConnection()) {
 			try {
@@ -63,6 +61,14 @@ public class DataBaseUtility {
 			}
 		} else {
 			System.out.println("Connection is Not Establieshed");
+		}
+	}
+
+	public void closeDatabaseconnection() {
+		try {
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 

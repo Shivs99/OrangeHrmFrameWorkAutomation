@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.orangehrm.automationtestcase.AddEmployeeTest">
+      <class name="com.orangehrm.automationtestcase.SearchEmployeeTest">
         <methods>
           <include name="closeBrowser"/>
+          <include name="searchIngEmployee"/>
           <include name="launchBrowser"/>
-          <include name="addEmployeeTest"/>
           <include name="logoutFromApplication"/>
           <include name="loginToApplication"/>
         </methods>
-      </class> <!-- com.orangehrm.automationtestcase.AddEmployeeTest -->
+      </class> <!-- com.orangehrm.automationtestcase.SearchEmployeeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

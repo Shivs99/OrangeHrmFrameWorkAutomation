@@ -9,6 +9,7 @@ public class DeleteEmployeeTest extends BaseClass {
 	@Test
 	public void deleteEmployee(String name)
 	{
+		
 		System.out.println(name+" Employee Deleted");
 	}
 }

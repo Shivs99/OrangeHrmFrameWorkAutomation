@@ -8,7 +8,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
+import com.orangehrm.database_utilites.DataBaseUtility;
 import com.orangehrm.file_utilities.ExcelUtility;
 import com.orangehrm.file_utilities.FileUtility;
 import com.orangehrm.objectrepositry_utilites.HomePage;
@@ -22,12 +24,19 @@ public class BaseClass {
 	FileUtility fUtil = new FileUtility();
 	WebDriverUtility wUtil = new WebDriverUtility();
 	ExcelUtility exUtil = new ExcelUtility();
+	DataBaseUtility dbUtil=new DataBaseUtility();
 
 	String URL;
 	String USERNAME;
 	String PASSWORD;
 	String BROWSER;
 
+	@BeforeSuite
+	public void ConnectToDB()
+	{
+	  dbUtil.getConnection();
+	}
+	
 	@BeforeClass
 	public void launchBrowser() throws Exception {
 
@@ -59,6 +68,7 @@ public class BaseClass {
 
 		LoginPage lp = new LoginPage(driver);
 		lp.login(USERNAME, PASSWORD);
+		
 	}
 
 	@AfterMethod
@@ -71,6 +81,11 @@ public class BaseClass {
 	@AfterClass
 	public void closeBrowser() {
 		driver.quit();
+	}
+	
+	public void closeDatabase()
+	{
+		dbUtil.closeDatabaseconnection();
 	}
 
 }
